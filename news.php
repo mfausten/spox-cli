@@ -35,7 +35,7 @@ if(true === empty($strSpox)) {
 
 }
 
-#$objTickerLinks = core\getByXPathExpression($strSpox, TICKER_LINK_SELECTOR);
+$objTickerLinks = core\getByXPathExpression($strSpox, TICKER_LINK_SELECTOR);
 
 if(!DEVELOPER_MODE && 0 === $objTickerLinks->length) {
 
@@ -47,7 +47,7 @@ if(!DEVELOPER_MODE && 0 === $objTickerLinks->length) {
 if(DEVELOPER_MODE)
   $strSpoxTicker = \file_get_contents(HOST_DEV);
 else
-  $strSpoxTicker = \file_get_contents($objTickerLinks[0]->nodeValue);
+  $strSpoxTicker = \file_get_contents(HOST . $objTickerLinks[0]->nodeValue);
 
 if(true === empty($strSpoxTicker) || false === $strSpoxTicker) {
 
