@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Europe/Berlin');
+
 const PERSIST_NEWS   = true;
 const DEVELOPER_MODE = false;
 
