@@ -26,7 +26,7 @@ function displayNewTickerItems(array $arrNewTickerItems) {
     print "\n" . \str_repeat('#', strlen($strHeading));
     print "\n" . $strHeading;
     print "\n" . \str_repeat('#', strlen($strHeading)) . "\n\n";
-    print $arrNewTickerItem['news'] . "\n";
+    print \spoxcli\helper\splitAt($arrNewTickerItem['news'], 80);
 
   }
 

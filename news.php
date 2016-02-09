@@ -13,6 +13,8 @@ require_once CORE_PATH . '/persistTickerItems.func.php';
 require_once CORE_PATH . '/parseTickerItemNews.func.php';
 require_once CORE_PATH . '/displayNewTickerItems.func.php';
 
+require_once HELPER_PATH . '/splitAt.func.php';
+
 # cli interface:
 
 # php news.php -a | show all news, even though some may already been displayed - are then all marked as read?

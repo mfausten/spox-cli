@@ -12,8 +12,9 @@ const PROJECT_PATH = __DIR__;
 
 const TICKER_DAY_STORAGE_PATH = PROJECT_PATH . '/ticker';
 
-const CORE_PATH  = PROJECT_PATH . '/core';
-const TESTS_PATH = PROJECT_PATH . '/tests';
+const CORE_PATH   = PROJECT_PATH . '/core';
+const HELPER_PATH = PROJECT_PATH . '/helper';
+const TESTS_PATH  = PROJECT_PATH . '/tests';
 
 const TICKER_DAY_STORAGE_FILE_NAME = 'news.json';
 
