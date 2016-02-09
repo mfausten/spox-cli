@@ -7,8 +7,10 @@ require_once './config.inc.php';
 require_once CORE_PATH . '/getByXPathExpression.func.php';
 require_once CORE_PATH . '/getAllTickerItemsFromRemote.func.php';
 require_once CORE_PATH . '/getExistingTickerItemIds.func.php';
+require_once CORE_PATH . '/getExistingTickerItems.func.php';
 require_once CORE_PATH . '/getNewTickerItems.func.php';
 require_once CORE_PATH . '/persistTickerItems.func.php';
+require_once CORE_PATH . '/parseTickerItemNews.func.php';
 require_once CORE_PATH . '/displayNewTickerItems.func.php';
 
 # cli interface:

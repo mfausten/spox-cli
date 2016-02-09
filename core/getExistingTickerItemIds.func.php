@@ -24,29 +24,15 @@ function getExistingTickerItemIds($strNewsFile) {
   $strExistingTickerItems = \file_get_contents($strNewsFile);
   $arrExistingTickerItems = \json_decode($strExistingTickerItems, true);
 
+  if(null === $arrExistingTickerItems)
+    return [];
+
   $arrExistingTickerItemIds = [];
 
   foreach($arrExistingTickerItems AS $intKey => $arrExistingTickerItem)
     if(\array_key_exists('id', $arrExistingTickerItem))
       $arrExistingTickerItemIds[] = $arrExistingTickerItem['id'];
 
-  if(null === $arrExistingTickerItemIds)
-    return [];
-
   return $arrExistingTickerItemIds;
 
 }
-
-function getExistingTickerItems($strNewsFile) {
-#var_dump($strNewsFile);
-
-  if(false === \file_exists($strNewsFile))
-    return [];
-
-  $strExistingTickerItems = \file_get_contents($strNewsFile);
-#var_dump($strExistingTickerItems);
-  return \json_decode($strExistingTickerItems, true);
-
-}
-
-#var_dump(getExistingTickerItems('/usr/local/www/cli-news/ticker/news.json'));

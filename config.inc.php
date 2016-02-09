@@ -24,4 +24,4 @@ const TICKER_ITEMS_SELECTOR = '//div[@class="tickeritem"]';
 const TICKER_ITEM_ID      = '//div[@class="wrp2"]/a[@class="date"]/@id';
 const TICKER_ITEM_TIME    = '//div[@class="wrp2"]/a[@class="date"]';
 const TICKER_ITEM_HEADING = '//div[@class="wrp3"]/h2';
-const TICKER_ITEM_NEWS    = '//div[@class="wrp3"]/div[@class="text"]/p[1]';
+const TICKER_ITEM_NEWS    = '//div[@class="wrp3"]/div[@class="text"]/p';

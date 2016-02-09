@@ -28,7 +28,7 @@ function getAllTickerItemsFromRemote(\DOMNodeList $objTickerItems) {
       'id'      => \substr(getByXPathExpression($strHtml, TICKER_ITEM_ID)[0]->nodeValue, 4),
       'time'    => getByXPathExpression($strHtml, TICKER_ITEM_TIME)[0]->nodeValue,
       'heading' => getByXPathExpression($strHtml, TICKER_ITEM_HEADING)[0]->nodeValue,
-      'news'    => getByXPathExpression($strHtml, TICKER_ITEM_NEWS)[0]->nodeValue
+      'news'    => parseTickerItemNews(getByXPathExpression($strHtml, TICKER_ITEM_NEWS))
 
     ];
 

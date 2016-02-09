@@ -41,7 +41,7 @@ function persistTickerItems(array $arrNewTickerItems, $strTickerDayStoragePath, 
   }
 
   $arrExistingTickerItems = getExistingTickerItems($strTickerFilePath);
-  $arrMergedTickerItems = \array_merge($arrNewTickerItems, $arrExistingTickerItems);
+  $arrMergedTickerItems   = \array_merge($arrNewTickerItems, $arrExistingTickerItems);
 
   # maybe readable/writable check? (again)
   # persist merge result in file
