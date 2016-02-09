@@ -1,7 +1,7 @@
 <?php
 
 const PERSIST_NEWS   = true;
-const DEVELOPER_MODE = true;
+const DEVELOPER_MODE = false;
 
 const HOST     = 'http://www.spox.com';
 const HOST_DEV = 'http://spox.dev';
@@ -17,7 +17,7 @@ const TICKER_DAY_STORAGE_FILE_NAME = 'news.json';
 
 const TICKER_NEWS_FILE_PATH = TICKER_DAY_STORAGE_PATH . '/' . TICKER_DAY_STORAGE_FILE_NAME;
 
-const TICKER_LINK_SELECTOR = '//a[contains(@href, "rundumdenball")]/@href';
+define('TICKER_LINK_SELECTOR', '//a[contains(@href, "rundumdenball/' . date('ym') . '/' . date('dm') . '")]/@href');
 
 const TICKER_ITEMS_SELECTOR = '//div[@class="tickeritem"]';
 
